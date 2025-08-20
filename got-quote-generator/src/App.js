@@ -22,12 +22,24 @@ function App() {
       </header>
       <main>
         {gotQuotes.map(q => (
-          <QuoteCard 
+          <QuoteCard
             key={q.id}
             quoteText={q.quote}
             characterName={q.character}
             isQuoteEpic={q.epic}
-          />
+          >
+            <button style={{
+              backgroundColor: '#4CAF50',
+              color: 'white',
+              padding: '8px 15px',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              marginTop: '10px'
+            }}>
+              Gefällt mir!
+            </button>
+          </QuoteCard> 
         ))}
       </main>
     </div>
